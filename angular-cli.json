@@ -18,9 +18,11 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "assets/css/scss/styles.scss"
+				"assets/css/scss/styles.scss"
       ],
-      "scripts": [],
+      "scripts": [
+        "assets/js/vendor/modernizr.min.js"
+      ],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",

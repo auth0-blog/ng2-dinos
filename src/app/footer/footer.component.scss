@@ -1,0 +1,15 @@
+/*--------------------
+	    FOOTER
+--------------------*/
+
+@import '../../assets/css/scss/core/partials/layout.vars';
+@import '../../assets/css/scss/core/partials/responsive.partial';
+
+.footer {
+	padding: $padding-screen-small;
+	text-align: center;
+
+	@include mq($large) {
+		padding: $padding-screen-large;
+	}
+}
