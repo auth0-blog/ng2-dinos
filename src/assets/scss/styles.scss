@@ -1,0 +1,17 @@
+/*
+ * ng2-dinos
+ * Author: Kim Maida 
+ * Author URI: <http://github.com/kmaida>
+ * Source: <https://github.com/kmaida/ng2-dinos>
+ * License: MIT
+*/
+
+// partials
+@import 'partials/layout.vars';
+@import 'partials/responsive.partial';
+
+// global styles
+@import 'base';
+@import 'presentation';
+@import 'layout';
+@import 'nav';

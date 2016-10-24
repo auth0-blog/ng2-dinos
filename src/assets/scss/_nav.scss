@@ -1,0 +1,80 @@
+/*--------------------
+	 NAVIGATION
+--------------------*/
+
+/*-------------------------------------------------------------------- Hamburger toggle --*/
+
+.toggle-offcanvas {
+	border-right: 1px solid rgba(255,255,255,.5);
+	display: inline-block;
+	height: 50px;
+	padding: 23.5px 13px;
+	position: relative;
+	text-align: center;
+	width: 50px;
+	z-index: 100;
+
+	span,
+	span:before,
+	span:after {
+		background: #fff;
+		border-radius: 1px;
+		content: '';
+		display: block;
+		height: 3px;
+		position: absolute;
+		transition: all 250ms ease-in-out;
+		width: 24px;
+	}
+	span {
+		&:before {
+			top: -9px;
+		}
+		&:after {
+			bottom: -9px;
+		}
+	}
+	.nav-open & {
+		span {
+			background: transparent;
+
+			&:before,
+			&:after {
+				top: 0;
+			}
+			&:before {
+				transform: rotate(45deg);
+			}
+			&:after {
+				transform: rotate(-45deg);
+			}
+		}
+	}
+}
+
+/*-------------------------------------------------------------------- Navigation --*/
+
+.header .nav {
+	box-shadow: inset -8px 0 8px -6px rgba(0,0,0,0.2);
+	padding: $padding-screen-small;
+
+	.active .nav-list-item-text {
+		font-weight: bold;
+	}
+	&-list {
+		list-style: none;
+		margin-bottom: 0;
+		padding-left: 0;
+
+		a {
+			display: block;
+			padding: 6px;
+
+			&:hover,
+			&:active,
+			&:focus {
+				text-decoration: none;
+			}
+		}
+	}
+}
