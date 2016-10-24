@@ -1,15 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
+	navOpen:boolean = false;
+	@Output() open = new EventEmitter<boolean>();
+	@Output() close = new EventEmitter<boolean>();
 
-  constructor() { }
+	toggleNav() {
+		this.navOpen = !this.navOpen;
 
-  ngOnInit() {
-  }
+		if (this.navOpen) {
+			this.open.emit(null);
+			console.log('open event emitted');
+		} else {
+			this.close.emit(null);
+			console.log('close event emitted');
+		}
+	}
 
 }

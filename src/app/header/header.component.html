@@ -1,23 +1,21 @@
 <header id="header" class="header clearfix">
-	<div navControl>
-		<div class="header-page bg-primary">
-			<a class="toggle-offcanvas bg-primary" ng-click="nav.toggleNav()"><span></span></a>
-			<h1 class="header-page-siteTitle">ng2-dinos</h1>
-		</div>
-
-		<nav id="nav" class="nav" role="navigation">
-			<ul class="nav-list">
-				<li>
-					<a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><span class="nav-list-item-text">All Dinosaurs</span></a>
-				</li>
-				<li>
-					<a routerLink="/about" routerLinkActive="active"><span class="nav-list-item-text">About</span></a>
-				</li>
-				<li>
-					<a href="https://github.com/kmaida/sample-nodeserver-dinos"><span
-							class="nav-list-item-text">Dino API on GitHub</span></a>
-				</li>
-			</ul>
-		</nav>
+	<div class="header-page bg-primary">
+		<a class="toggle-offcanvas bg-primary" (click)="toggleNav(!navOpen)"><span></span></a>
+		<h1 class="header-page-siteTitle">ng2-dinos</h1>
 	</div>
+
+	<nav id="nav" class="nav" role="navigation">
+		<ul class="nav-list">
+			<li>
+				<a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><span class="nav-list-item-text">All Dinosaurs</span></a>
+			</li>
+			<li>
+				<a routerLink="/about" routerLinkActive="active"><span class="nav-list-item-text">About</span></a>
+			</li>
+			<li>
+				<a href="https://github.com/kmaida/sample-nodeserver-dinos"><span
+						class="nav-list-item-text">Dino API on GitHub</span></a>
+			</li>
+		</ul>
+	</nav>
 </header>
