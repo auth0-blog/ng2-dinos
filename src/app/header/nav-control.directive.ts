@@ -5,7 +5,8 @@ import { Observable } from 'rxjs/Rx';
   selector: '[navControl]'
 })
 export class NavControlDirective {
-	initWinHeight = 0;
+	private initWinHeight:number = 0;
+	public navOpen:boolean = false;
 
   public constructor(private el: ElementRef, private renderer: Renderer) { 
 		Observable.fromEvent(window, 'resize')
@@ -24,16 +25,6 @@ export class NavControlDirective {
 		// TODO: refactor this not to use this.el.nativeElement?
 		let winHeight = e ? e.target.innerHeight : this.initWinHeight;
 		this.renderer.setElementStyle(this.el.nativeElement, 'height', winHeight + 'px');
-	}
-
-	public navOpen:boolean = false;
-
-	onToggleNav(event) {
-		console.log('toggle nav', event);
-	}
-
-	public toggle() {
-		console.log('toggle from navControl');
 	}
 
 }

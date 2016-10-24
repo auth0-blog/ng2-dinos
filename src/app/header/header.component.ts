@@ -7,18 +7,14 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class HeaderComponent {
 	navOpen:boolean = false;
-	@Output() open = new EventEmitter<boolean>();
-	@Output() close = new EventEmitter<boolean>();
-
+	
 	toggleNav() {
 		this.navOpen = !this.navOpen;
 
 		if (this.navOpen) {
-			this.open.emit(null);
-			console.log('open event emitted');
+			console.log('open nav');
 		} else {
-			this.close.emit(null);
-			console.log('close event emitted');
+			console.log('close nav');
 		}
 	}
 
