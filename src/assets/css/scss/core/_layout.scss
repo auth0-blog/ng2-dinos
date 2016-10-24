@@ -1,0 +1,58 @@
+/*--------------------
+ LAYOUT FUNCTIONALITY
+--------------------*/
+
+body {
+	min-width: 320px;
+}
+.layout-overflow {
+	overflow: hidden;	/* necessary to handle offcanvas scrollbar behavior */
+}
+
+/*-------------------------------------------------------------------- Off-canvas Functionality --*/
+
+/*-- Content canvas wrapper --*/
+
+.layout-canvas {
+	backface-visibility: hidden;
+	position: relative;
+	left: 0;
+	width: 100%;
+
+	.csstransforms3d & {
+		transition: transform 250ms ease;
+		transform: translate3d(0,0,0);
+	}
+	.csstransforms3d .nav-open & {
+		transform: translate3d(270px,0,0);
+	}
+	.no-csstransforms3d .nav-open & {
+		left: 270px;
+	}
+}
+
+/*-- Navigation --*/
+
+.header .nav {
+	backface-visibility: hidden;
+	display: none;	/* deal with FOUC */
+	height: 100%;
+	overflow-y: auto;
+	position: absolute;
+		top: 0;
+	width: 270px;
+
+	.nav-closed &,
+	.nav-open & {
+		display: block;	/* deal with FOUC */
+	}
+	.csstransforms3d & {
+		transform: translate3d(-100%,0,0);
+	}
+	.no-csstransforms3d .nav-closed & {
+		left: -100%;
+	}
+	.no-csstransforms3d .nav-open & {
+		left: -270px;
+	}
+}
