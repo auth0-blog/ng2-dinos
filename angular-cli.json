@@ -21,7 +21,8 @@
 				"assets/scss/styles.scss"
       ],
       "scripts": [
-        "assets/js/vendor/modernizr.min.js"
+        "assets/js/vendor/modernizr.min.js",
+				"assets/js/vendor/jquery.min.js"
       ],
       "environments": {
         "source": "environments/environment.ts",
