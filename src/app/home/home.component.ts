@@ -10,7 +10,8 @@ import { Dino } from '../core/dino';
 })
 export class HomeComponent implements OnInit {
 	dinos: Dino[] = [];
-	pageName = 'All Dinosaurs';
+	pageName: string = 'All Dinosaurs';
+	error: boolean;
 
   constructor(private titleService: Title, private dinosService: DinosService) { }
 
@@ -19,7 +20,10 @@ export class HomeComponent implements OnInit {
 
 		this.dinosService
 			.getAllDinos()
-			.subscribe(res => this.dinos = res);
+			.subscribe(
+				res => this.dinos = res,
+				err => this.error = true
+			);
   }
 
 }

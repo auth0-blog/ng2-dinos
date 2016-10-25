@@ -14,11 +14,22 @@ export class DinosService {
 	getAllDinos(): Observable<Dino[]> {
 		return this.http
 			.get(`${this.baseUrl}dinosaurs`)
-			.map((res:Response) => res.json());
+			.map(this.handleSuccess)
+			.catch(this.handleError);
 	}
 
 	getDino(id: number): Observable<Dino> {
 		return this.http.get(`${this.baseUrl}dinosaur/${id}`)
-			.map((res:Response) => res.json());
+			.map(this.handleSuccess)
+			.catch(this.handleError);
+	}
+
+	handleSuccess(res:Response) {
+		return res.json();
+	}
+
+	handleError(err) {
+		let errorMsg = err.message || 'There was a problem getting dinosaur data from the API.';
+		return Observable.throw(errorMsg);
 	}
 }

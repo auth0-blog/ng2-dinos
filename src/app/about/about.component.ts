@@ -7,7 +7,7 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-	pageName = 'About';
+	pageName: string = 'About';
 
   constructor(private titleService: Title) { }
 

@@ -11,7 +11,7 @@ import { Dino } from '../core/dino';
 })
 export class DetailComponent implements OnInit {
 	dino: Dino;
-	pageName;
+	error: boolean;
 
   constructor(
 		private titleService: Title, 
@@ -25,10 +25,13 @@ export class DetailComponent implements OnInit {
 
 			this.dinosService
 				.getDino(id)
-				.subscribe(data => {
-					this.dino = data;
-					this.titleService.setTitle(data.name);
-				});
+				.subscribe(
+					res => {
+						this.dino = res;
+						this.titleService.setTitle(res.name);
+					},
+					err => this.error = true
+				);
 		});
   }
 
