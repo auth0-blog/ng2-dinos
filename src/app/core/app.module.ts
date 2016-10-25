@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './ui/app.component';
-import { NavControlDirective } from './ui/nav-control.directive';
+import { LayoutResizeDirective } from './ui/layout-resize.directive';
 
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
@@ -18,7 +18,7 @@ import { HomeComponent } from '../home/home.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    NavControlDirective,
+    LayoutResizeDirective,
     AboutComponent,
     HomeComponent
   ],

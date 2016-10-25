@@ -1,8 +1,8 @@
 <div class="layout-overflow">
-	<div class="layout-canvas" navControl>
+	<div class="layout-canvas" layoutResize [ngClass]="{'nav-open': navOpen, 'nav-closed': !navOpen}">
 
 		<!-- HEADER -->
-		<app-header></app-header>
+		<app-header (navToggled)="navToggleHandler($event)"></app-header>
 
 		<!-- CONTENT -->
 		<div id="layout-view" class="layout-view">

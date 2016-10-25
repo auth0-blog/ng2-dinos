@@ -5,17 +5,13 @@ import { Component, EventEmitter, Output } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
-	navOpen:boolean = false;
-	
+export class HeaderComponent  {
+	@Output() navToggled = new EventEmitter();
+	navOpen:boolean;
+
 	toggleNav() {
 		this.navOpen = !this.navOpen;
-
-		if (this.navOpen) {
-			console.log('open nav');
-		} else {
-			console.log('close nav');
-		}
+		this.navToggled.emit(this.navOpen);
 	}
 
 }

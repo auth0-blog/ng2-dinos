@@ -2,9 +2,9 @@ import { Directive, OnInit, ElementRef, Renderer } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 
 @Directive({
-  selector: '[navControl]'
+  selector: '[layoutResize]'
 })
-export class NavControlDirective {
+export class LayoutResizeDirective {
 	private initWinHeight:number = 0;
 	public navOpen:boolean = false;
 
