@@ -25,7 +25,7 @@ export class DetailComponent implements OnInit {
 
 			this.dinosService
 				.getDino(id)
-				.subscribe((data) => {
+				.subscribe(data => {
 					this.dino = data;
 					this.titleService.setTitle(data.name);
 				});
