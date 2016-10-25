@@ -13,5 +13,4 @@ export class HeaderComponent  {
 		this.navOpen = !this.navOpen;
 		this.navToggled.emit(this.navOpen);
 	}
-
 }

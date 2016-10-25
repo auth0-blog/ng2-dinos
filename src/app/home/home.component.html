@@ -1,3 +1,9 @@
-<p>
-  home works!
-</p>
+<article id="content-wrapper" class="content-wrapper home-wrapper">
+	<h2 class="content-heading">All Dinosaurs</h2>
+	
+	<section class="row">
+		<div class="col-sm-12 col-md-4" *ngFor="let dino of dinos">
+			<dino-card [dino]="dino"></dino-card>
+		</div>
+	</section>
+</article>

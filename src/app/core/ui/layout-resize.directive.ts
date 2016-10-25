@@ -2,7 +2,7 @@ import { Directive, OnInit, ElementRef, Renderer } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 
 @Directive({
-  selector: '[layoutResize]'
+  selector: '[layout-resize]'
 })
 export class LayoutResizeDirective {
 	private initWinHeight:number = 0;
@@ -24,7 +24,7 @@ export class LayoutResizeDirective {
 	private resizeFn(e) {
 		// TODO: refactor this not to use this.el.nativeElement?
 		let winHeight = e ? e.target.innerHeight : this.initWinHeight;
-		this.renderer.setElementStyle(this.el.nativeElement, 'height', winHeight + 'px');
+		this.renderer.setElementStyle(this.el.nativeElement, 'min-height', winHeight + 'px');
 	}
 
 }

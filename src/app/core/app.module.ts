@@ -12,6 +12,8 @@ import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
 import { AboutComponent } from '../about/about.component';
 import { HomeComponent } from '../home/home.component';
+import { DinoCardComponent } from '../dino-card/dino-card.component';
+import { DinosService } from './dinos.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { HomeComponent } from '../home/home.component';
     FooterComponent,
     LayoutResizeDirective,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+		DinoCardComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { HomeComponent } from '../home/home.component';
 		AppRoutingModule
   ],
   providers: [
-	  Title
+	  Title,
+		DinosService
   ],
   bootstrap: [AppComponent]
 })
