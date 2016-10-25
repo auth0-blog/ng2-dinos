@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 
 import { HomeComponent }  from '../home/home.component';
 import { AboutComponent } from '../about/about.component';
+import { DetailComponent } from '../detail/detail.component';
 
 @NgModule({
   imports: [
@@ -14,6 +15,10 @@ import { AboutComponent } from '../about/about.component';
       { 
 				path: 'about', 
 				component: AboutComponent
+			},
+			{
+				path: 'dinosaur/:id',
+				component: DetailComponent
 			}
     ])
   ],

@@ -1,0 +1,45 @@
+<article id="content-wrapper" class="content-wrapper detail-wrapper">
+
+	<section *ngIf="dino" id="detail-content-dinosaur" class="panel panel-default">
+		<div class="panel-heading">
+			<h2 class="text-center">{{dino.name}}</h2>
+		</div>
+		
+		<ul class="list-group">
+			<li class="list-group-item">
+				<h4 class="list-group-item-heading">Pronunciation:</h4>
+				<p class="list-group-item-text">
+					<em>{{dino.pronunciation}}</em>	
+				</p>
+			</li>
+			<li class="list-group-item">
+				<h4 class="list-group-item-heading">Name Means:</h4>
+				<p class="list-group-item-text">{{dino.meaningOfName}}</p>
+			</li>
+			<li class="list-group-item">
+				<h4 class="list-group-item-heading">Length:</h4>
+				<p class="list-group-item-text">{{dino.length}}</p>
+			</li>
+			<li class="list-group-item">
+				<h4 class="list-group-item-heading">Diet:</h4>
+				<p class="list-group-item-text">{{dino.diet}}</p>
+			</li>
+			<li class="list-group-item">
+				<h4 class="list-group-item-heading">Lived:</h4>
+				<p class="list-group-item-text">
+					{{dino.period}}<br>
+					<em>({{dino.mya}} million years ago)</em>
+				</p>
+			</li>
+		</ul>
+
+		<div class="panel-body">
+			<p class="lead" [innerHTML]="dino.info"></p>
+		</div>
+
+		<div class="panel-footer">
+			<a routerLink="/">&larr; All Dinosaurs</a>
+		</div>
+	</section>
+
+</article>

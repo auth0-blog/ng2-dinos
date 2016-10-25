@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
 
 		this.dinosService
 			.getAllDinos()
-			.subscribe(res => { this.dinos = res; console.log(this.dinos) });
+			.subscribe(res => this.dinos = res);
   }
 
 }

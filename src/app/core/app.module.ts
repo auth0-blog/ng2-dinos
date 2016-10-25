@@ -12,6 +12,7 @@ import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
 import { AboutComponent } from '../about/about.component';
 import { HomeComponent } from '../home/home.component';
+import { DetailComponent } from '../detail/detail.component';
 import { DinoCardComponent } from '../dino-card/dino-card.component';
 import { DinosService } from './dinos.service';
 
@@ -23,6 +24,7 @@ import { DinosService } from './dinos.service';
     LayoutResizeDirective,
     AboutComponent,
     HomeComponent,
+		DetailComponent,
 		DinoCardComponent
   ],
   imports: [

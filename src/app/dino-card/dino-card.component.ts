@@ -8,6 +8,7 @@ import { Dino } from '../core/dino';
 })
 export class DinoCardComponent implements OnInit {
 	@Input() dino: Dino;
+
   constructor() { }
 
   ngOnInit() {

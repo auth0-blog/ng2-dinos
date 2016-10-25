@@ -1,13 +1,13 @@
 export class Dino {
 	constructor(
-		public id: Number,
-		public name: String,
-		public pronunciation: String,
-		public meaningOfName: String,
-		public diet: String,
-		public length: String,
-		public period: String,
-		public mya: String,
-		public info: String
+		public id: number,
+		public name: string,
+		public pronunciation: string,
+		public meaningOfName: string,
+		public diet: string,
+		public length: string,
+		public period: string,
+		public mya: string,
+		public info: string
 	) { }
 }

@@ -17,9 +17,8 @@ export class DinosService {
 			.map((res:Response) => res.json());
 	}
 
-	getDino(id:String): Observable<Dino> {
+	getDino(id: number): Observable<Dino> {
 		return this.http.get(`${this.baseUrl}dinosaur/${id}`)
 			.map(res => res.json());
 	}
-
 }
