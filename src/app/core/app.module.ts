@@ -8,6 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './ui/app.component';
 import { LayoutResizeDirective } from './ui/layout-resize.directive';
 
+import { FilterPipe } from './filter.pipe';
+
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
 import { AboutComponent } from '../about/about.component';
@@ -25,7 +27,8 @@ import { DinosService } from './dinos.service';
     AboutComponent,
     HomeComponent,
 		DetailComponent,
-		DinoCardComponent
+		DinoCardComponent,
+		FilterPipe
   ],
   imports: [
     BrowserModule,

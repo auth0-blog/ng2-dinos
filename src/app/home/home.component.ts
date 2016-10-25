@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
 	dinos: Dino[] = [];
 	pageName: string = 'All Dinosaurs';
 	error: boolean;
+	query: string = '';
 
   constructor(private titleService: Title, private dinosService: DinosService) { }
 
@@ -25,5 +26,9 @@ export class HomeComponent implements OnInit {
 				err => this.error = true
 			);
   }
+
+	resetQuery() {
+		this.query = '';
+	}
 
 }
