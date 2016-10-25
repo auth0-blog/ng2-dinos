@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { DinosService } from '../core/dinos.service';
-import { Dino } from '../core/dino';
+import { DinoDetail } from '../core/models/dino-detail';
 
 @Component({
   selector: 'app-detail',
@@ -10,7 +10,7 @@ import { Dino } from '../core/dino';
   styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent implements OnInit {
-	dino: Dino;
+	dino: DinoDetail;
 	error: boolean;
 
   constructor(
@@ -34,5 +34,4 @@ export class DetailComponent implements OnInit {
 				);
 		});
   }
-
 }

@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
-import { Dino } from './dino';
+import { Dino } from './models/dino';
+import { DinoDetail } from './models/dino-detail';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
@@ -18,7 +19,7 @@ export class DinosService {
 			.catch(this.handleError);
 	}
 
-	getDino(id: number): Observable<Dino> {
+	getDino(id: number): Observable<DinoDetail> {
 		return this.http.get(`${this.baseUrl}dinosaur/${id}`)
 			.map(this.handleSuccess)
 			.catch(this.handleError);

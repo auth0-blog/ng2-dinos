@@ -18,7 +18,7 @@
 	</section>
 
 	<!-- No search results -->
-	<p *ngIf="!(dinos | filter:query).length" class="alert alert-warning">
+	<p *ngIf="!(dinos | filter:query).length && query && !error" class="alert alert-warning">
 		No information available on a dinosaur called <em class="text-danger">{{query}}</em>, sorry!
 	</p>
 

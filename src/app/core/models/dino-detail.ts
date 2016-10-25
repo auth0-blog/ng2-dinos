@@ -1,4 +1,4 @@
-export class Dino {
+export class DinoDetail {
 	constructor(
 		public id: number,
 		public name: string,
