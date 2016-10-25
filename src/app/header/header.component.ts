@@ -7,7 +7,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class HeaderComponent  {
 	@Output() navToggled = new EventEmitter();
-	navOpen:boolean;
+	navOpen:boolean = false;
 
 	toggleNav() {
 		this.navOpen = !this.navOpen;

@@ -11,7 +11,7 @@ export class AppComponent {
 
 	navOpen:boolean = false;
 
-	navToggleHandler(open:boolean) {
+	navToggleHandler() {
 		this.navOpen = !this.navOpen;
 	}
 }
