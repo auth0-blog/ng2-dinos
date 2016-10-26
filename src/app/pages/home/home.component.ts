@@ -10,7 +10,7 @@ import { Dino } from '../../core/models/dino.model';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  dinos: Dino[] = [];
+  dinos: Dino[];
   pageName: string = 'All Dinosaurs';
   error: boolean;
   query: string = '';
@@ -41,6 +41,10 @@ export class HomeComponent implements OnInit {
 
   resetQuery() {
     this.query = '';
+  }
+
+  isLoaded() {
+    return this.loading === false;
   }
 
 }

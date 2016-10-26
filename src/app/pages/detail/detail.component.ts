@@ -12,6 +12,7 @@ import { DinoDetail } from '../../core/models/dino-detail.model';
 export class DetailComponent implements OnInit {
   dino: DinoDetail;
   error: boolean;
+  loading: boolean;
 
   constructor(
     private titleService: Title,
@@ -29,14 +30,23 @@ export class DetailComponent implements OnInit {
           res => {
             this.dino = res;
             this.titleService.setTitle(res.name);
+            this.loading = false;
           },
-          err => this.error = true
+          err => {
+            this.error = true;
+            this.loading = false;
+          }
         );
     });
   }
 
   ngOnInit() {
+    this.loading = true;
     this.getDino();
+  }
+
+  isLoaded() {
+    return this.loading === false;
   }
   
 }

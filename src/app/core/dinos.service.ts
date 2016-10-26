@@ -27,6 +27,8 @@ export class DinosService {
   }
 
   private handleSuccess(res: Response) {
+    console.log('success', res);
+
     if (typeof res === 'object') {
       return res.json();
     } else {
@@ -34,9 +36,9 @@ export class DinosService {
     }
   }
 
-  private handleError(err) {
+  private handleError(err: Response | any) {
     let errorMsg = err.message || 'Unable to retrieve data';
-    return Observable.throw('API ERROR:', errorMsg);
+    return Observable.throw(errorMsg);
   }
   
 }
