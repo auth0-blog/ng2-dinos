@@ -8,15 +8,15 @@ export class LayoutResizeDirective implements OnInit {
   private initWinHeight: number = 0;
   public navOpen: boolean = false;
 
-  public constructor(private el: ElementRef, private renderer: Renderer) {
+  public constructor(private el: ElementRef, private renderer: Renderer) { }
+
+  ngOnInit() {
     Observable.fromEvent(window, 'resize')
       .debounceTime(200)
       .subscribe((event) => {
         this.resizeFn(event);
       });
-  }
 
-  ngOnInit() {
     this.initWinHeight = window.innerHeight;
     this.resizeFn(null);
   }

@@ -6,8 +6,7 @@ import { DinoDetail } from '../../core/models/dino-detail';
 
 @Component({
   selector: 'app-detail',
-  templateUrl: './detail.component.html',
-  styleUrls: ['./detail.component.scss']
+  templateUrl: './detail.component.html'
 })
 export class DetailComponent implements OnInit {
   dino: DinoDetail;
@@ -34,4 +33,5 @@ export class DetailComponent implements OnInit {
         );
     });
   }
+  
 }

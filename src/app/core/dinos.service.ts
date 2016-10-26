@@ -37,4 +37,5 @@ export class DinosService {
     let errorMsg = err.message || 'Unable to retrieve data';
     return Observable.throw('API ERROR:', errorMsg);
   }
+  
 }

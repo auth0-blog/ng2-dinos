@@ -1,34 +1,34 @@
 <article id="content-wrapper" class="content-wrapper home-wrapper">
-	<h2 class="content-heading">{{pageName}}</h2>
+  <h2 class="content-heading">{{pageName}}</h2>
 
-	<app-loading *ngIf="loading"></app-loading>
+  <app-loading *ngIf="loading"></app-loading>
 
-	<div *ngIf="loading === false">
-		<!-- Search dinosaurs -->
-		<section class="home-search input-group">
-			<label class="input-group-addon" for="search">Search</label>
-			<input id="search" type="text" [(ngModel)]="query" class="form-control" />
-			<span class="input-group-btn">
-				<button class="btn btn-danger" (click)="resetQuery()" [disabled]="!query">&times;</button>
-			</span>
-		</section>
-		
-		<!-- Dinosaurs -->
-		<section *ngIf="dinos" class="row">
-			<div class="col-sm-12 col-md-4" *ngFor="let dino of dinos | filter:query">
-				<app-dino-card [dino]="dino"></app-dino-card>
-			</div>
-		</section>
+  <div *ngIf="loading === false">
+    <!-- Search dinosaurs -->
+    <section class="home-search input-group">
+      <label class="input-group-addon" for="search">Search</label>
+      <input id="search" type="text" [(ngModel)]="query" class="form-control" />
+      <span class="input-group-btn">
+        <button class="btn btn-danger" (click)="resetQuery()" [disabled]="!query">&times;</button>
+      </span>
+    </section>
+    
+    <!-- Dinosaurs -->
+    <section *ngIf="dinos" class="row">
+      <div class="col-sm-12 col-md-4" *ngFor="let dino of dinos | filter:query">
+        <app-dino-card [dino]="dino"></app-dino-card>
+      </div>
+    </section>
 
-		<!-- No search results -->
-		<p *ngIf="!(dinos | filter:query).length && query && !error" class="alert alert-warning">
-			No information available on a dinosaur called <em class="text-danger">{{query}}</em>, sorry!
-		</p>
+    <!-- No search results -->
+    <p *ngIf="!(dinos | filter:query).length && query && !error" class="alert alert-warning">
+      No information available on a dinosaur called <em class="text-danger">{{query}}</em>, sorry!
+    </p>
 
-		<!-- Error -->
-		<p *ngIf="error" class="alert alert-danger">
-			<strong>Rawr!</strong> There was an error retrieving dinosaur data.
-		</p>
-	</div>
+    <!-- Error -->
+    <p *ngIf="error" class="alert alert-danger">
+      <strong>Rawr!</strong> There was an error retrieving dinosaur data.
+    </p>
+  </div>
 
 </article>

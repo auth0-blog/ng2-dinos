@@ -9,6 +9,4 @@ import { Component } from '@angular/core';
       margin: 30px auto; }
   `]
 })
-export class LoadingComponent {
-  constructor() { }
-}
+export class LoadingComponent {}
