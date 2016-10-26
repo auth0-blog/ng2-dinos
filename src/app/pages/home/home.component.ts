@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit {
     this.query = '';
   }
 
-  isLoaded() {
+  get isLoaded() {
     return this.loading === false;
   }
 

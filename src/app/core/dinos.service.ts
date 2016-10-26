@@ -27,8 +27,6 @@ export class DinosService {
   }
 
   private handleSuccess(res: Response) {
-    console.log('success', res);
-
     if (typeof res === 'object') {
       return res.json();
     } else {

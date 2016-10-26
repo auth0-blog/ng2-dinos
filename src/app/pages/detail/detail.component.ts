@@ -45,7 +45,7 @@ export class DetailComponent implements OnInit {
     this.getDino();
   }
 
-  isLoaded() {
+  get isLoaded() {
     return this.loading === false;
   }
   
