@@ -6,11 +6,9 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FilterPipe } from './filter.pipe';
 import { DinosService } from './dinos.service';
-
 import { AppComponent } from './ui/app.component';
 import { LayoutResizeDirective } from './ui/layout-resize.directive';
 import { LoadingComponent } from './ui/loading.component';
-
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
 import { AboutComponent } from '../pages/about/about.component';

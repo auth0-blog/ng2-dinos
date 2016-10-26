@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
-import { Dino } from './models/dino.model';
-import { DinoDetail } from './models/dino-detail.model';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+
+import { Dino } from './models/dino.model';
+import { DinoDetail } from './models/dino-detail.model';
 
 @Injectable()
 export class DinosService {

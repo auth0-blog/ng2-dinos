@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+
 import { Dino } from '../../../core/models/dino.model';
 
 @Component({
