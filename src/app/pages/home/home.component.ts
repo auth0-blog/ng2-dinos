@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { DinosService } from '../../core/dinos.service';
-import { Dino } from '../../core/models/dino';
+import { Dino } from '../../core/models/dino.model';
 
 @Component({
   selector: 'app-home',

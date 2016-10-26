@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Dino } from '../../../core/models/dino';
+import { Dino } from '../../../core/models/dino.model';
 
 @Component({
   selector: 'app-dino-card',
