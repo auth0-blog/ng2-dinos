@@ -25,12 +25,16 @@ export class DinosService {
 			.catch(this.handleError);
 	}
 
-	handleSuccess(res:Response) {
-		return res.json();
+	private handleSuccess(res:Response) {
+		if (typeof res == 'object') {
+			return res.json();
+		} else {
+			this.handleError({message: 'retrieved data is not typeof object'});
+		}
 	}
 
-	handleError(err) {
-		let errorMsg = err.message || 'There was a problem getting dinosaur data from the API.';
+	private handleError(err) {
+		let errorMsg = err.message || 'Error retrieving data';
 		return Observable.throw(errorMsg);
 	}
 }
