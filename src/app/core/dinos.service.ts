@@ -29,12 +29,12 @@ export class DinosService {
 		if (typeof res == 'object') {
 			return res.json();
 		} else {
-			this.handleError({message: 'retrieved data is not typeof object'});
+			this.handleError({message: 'Retrieved data is not typeof object'});
 		}
 	}
 
 	private handleError(err) {
-		let errorMsg = err.message || 'Error retrieving data';
-		return Observable.throw(errorMsg);
+		let errorMsg = err.message || 'Unable to retrieve data';
+		return Observable.throw('API ERROR:', errorMsg);
 	}
 }
