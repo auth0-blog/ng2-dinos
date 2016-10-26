@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router, ActivatedRoute, Params } from '@angular/router';
-import { DinosService } from '../core/dinos.service';
-import { DinoDetail } from '../core/models/dino-detail';
+import { DinosService } from '../../core/dinos.service';
+import { DinoDetail } from '../../core/models/dino-detail';
 
 @Component({
   selector: 'app-detail',

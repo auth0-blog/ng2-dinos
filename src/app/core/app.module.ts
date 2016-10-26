@@ -13,10 +13,11 @@ import { LoadingComponent } from './ui/loading.component';
 
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
-import { AboutComponent } from '../about/about.component';
-import { HomeComponent } from '../home/home.component';
-import { DetailComponent } from '../detail/detail.component';
-import { DinoCardComponent } from '../dino-card/dino-card.component';
+import { AboutComponent } from '../pages/about/about.component';
+import { HomeComponent } from '../pages/home/home.component';
+import { Error404Component } from '../pages/error404/error404.component';
+import { DetailComponent } from '../pages/detail/detail.component';
+import { DinoCardComponent } from '../pages/home/dino-card/dino-card.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { DinoCardComponent } from '../dino-card/dino-card.component';
     AboutComponent,
     HomeComponent,
 		DetailComponent,
+		Error404Component,
 		DinoCardComponent,
 		FilterPipe
   ],
