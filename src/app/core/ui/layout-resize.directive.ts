@@ -5,10 +5,10 @@ import { Observable } from 'rxjs/Rx';
   selector: '[appLayoutResize]'
 })
 export class LayoutResizeDirective implements OnInit {
+  navOpen: boolean = false;
   private initWinHeight: number = 0;
-  public navOpen: boolean = false;
 
-  public constructor(private el: ElementRef, private renderer: Renderer) { }
+  constructor(private el: ElementRef, private renderer: Renderer) { }
 
   ngOnInit() {
     Observable.fromEvent(window, 'resize')

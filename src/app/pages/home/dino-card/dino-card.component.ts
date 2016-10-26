@@ -6,6 +6,8 @@ import { Dino } from '../../../core/models/dino.model';
   selector: 'app-dino-card',
   templateUrl: './dino-card.component.html'
 })
-export class DinoCardComponent {
+export class DinoCardComponent implements OnInit {
   @Input() dino: Dino;
+
+  ngOnInit() { }
 }

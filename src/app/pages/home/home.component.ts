@@ -18,11 +18,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private titleService: Title, private dinosService: DinosService) { }
 
-  ngOnInit() {
-    this.titleService.setTitle(this.pageName);
-
-    this.loading = true;
-
+  getAllDinos() {
     this.dinosService
       .getAllDinos()
       .subscribe(
@@ -35,6 +31,12 @@ export class HomeComponent implements OnInit {
           this.loading = false;
         }
       );
+  }
+
+  ngOnInit() {
+    this.titleService.setTitle(this.pageName);
+    this.loading = true;
+    this.getAllDinos();
   }
 
   resetQuery() {

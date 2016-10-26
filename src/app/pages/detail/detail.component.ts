@@ -19,7 +19,7 @@ export class DetailComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute) { }
 
-  ngOnInit() {
+  getDino() {
     this.route.params.forEach((params: Params) => {
       let id = +params['id'];	// convert string to number
 
@@ -33,6 +33,10 @@ export class DetailComponent implements OnInit {
           err => this.error = true
         );
     });
+  }
+
+  ngOnInit() {
+    this.getDino();
   }
   
 }
