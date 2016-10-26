@@ -7,9 +7,7 @@ import { HeaderComponent } from '../../header/header.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app works!';
-
-	navOpen:boolean = false;
+  navOpen:boolean = false;
 
 	navToggleHandler() {
 		this.navOpen = !this.navOpen;

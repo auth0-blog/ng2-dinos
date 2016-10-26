@@ -22,7 +22,6 @@ export class LayoutResizeDirective {
   }
 
 	private resizeFn(e) {
-		// TODO: refactor this not to use this.el.nativeElement?
 		let winHeight = e ? e.target.innerHeight : this.initWinHeight;
 		this.renderer.setElementStyle(this.el.nativeElement, 'min-height', winHeight + 'px');
 	}
