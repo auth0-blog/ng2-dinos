@@ -9,35 +9,35 @@ import { Dino } from '../../core/models/dino';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-	dinos: Dino[] = [];
-	pageName: string = 'All Dinosaurs';
-	error: boolean;
-	query: string = '';
-	loading: boolean;
+  dinos: Dino[] = [];
+  pageName: string = 'All Dinosaurs';
+  error: boolean;
+  query: string = '';
+  loading: boolean;
 
   constructor(private titleService: Title, private dinosService: DinosService) { }
 
   ngOnInit() {
-		this.titleService.setTitle(this.pageName);
+    this.titleService.setTitle(this.pageName);
 
-		this.loading = true;
+    this.loading = true;
 
-		this.dinosService
-			.getAllDinos()
-			.subscribe(
-				res => {
-					this.dinos = res;
-					this.loading = false;
-				},
-				err => {
-					this.error = true;
-					this.loading = false;
-				}
-			);
+    this.dinosService
+      .getAllDinos()
+      .subscribe(
+        res => {
+          this.dinos = res;
+          this.loading = false;
+        },
+        err => {
+          this.error = true;
+          this.loading = false;
+        }
+      );
   }
 
-	resetQuery() {
-		this.query = '';
-	}
+  resetQuery() {
+    this.query = '';
+  }
 
 }

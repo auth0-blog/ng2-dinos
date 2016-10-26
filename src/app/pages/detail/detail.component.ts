@@ -10,28 +10,28 @@ import { DinoDetail } from '../../core/models/dino-detail';
   styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent implements OnInit {
-	dino: DinoDetail;
-	error: boolean;
+  dino: DinoDetail;
+  error: boolean;
 
   constructor(
-		private titleService: Title, 
-		private dinosService: DinosService, 
-		private router: Router, 
-		private route: ActivatedRoute) { }
+    private titleService: Title,
+    private dinosService: DinosService,
+    private router: Router,
+    private route: ActivatedRoute) { }
 
   ngOnInit() {
-		this.route.params.forEach((params: Params) => {
-			let id = +params['id'];	// convert string to number
+    this.route.params.forEach((params: Params) => {
+      let id = +params['id'];	// convert string to number
 
-			this.dinosService
-				.getDino(id)
-				.subscribe(
-					res => {
-						this.dino = res;
-						this.titleService.setTitle(res.name);
-					},
-					err => this.error = true
-				);
-		});
+      this.dinosService
+        .getDino(id)
+        .subscribe(
+          res => {
+            this.dino = res;
+            this.titleService.setTitle(res.name);
+          },
+          err => this.error = true
+        );
+    });
   }
 }

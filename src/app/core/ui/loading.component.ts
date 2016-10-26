@@ -4,10 +4,10 @@ import { Component } from '@angular/core';
   selector: 'app-loading',
   template: '<img class="loading" src="/assets/images/ajax-loader.gif">',
   styles: [`
-		.loading { 
-			display: block; 
-			margin: 30px auto; }
-	`]
+    .loading { 
+      display: block; 
+      margin: 30px auto; }
+  `]
 })
 export class LoadingComponent {
   constructor() { }

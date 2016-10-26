@@ -25,23 +25,23 @@ import { DinoCardComponent } from '../pages/home/dino-card/dino-card.component';
     HeaderComponent,
     FooterComponent,
     LayoutResizeDirective,
-		LoadingComponent,
+    LoadingComponent,
     AboutComponent,
     HomeComponent,
-		DetailComponent,
-		Error404Component,
-		DinoCardComponent,
-		FilterPipe
+    DetailComponent,
+    Error404Component,
+    DinoCardComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-		AppRoutingModule
+    AppRoutingModule
   ],
   providers: [
-	  Title,
-		DinosService
+    Title,
+    DinosService
   ],
   bootstrap: [AppComponent]
 })

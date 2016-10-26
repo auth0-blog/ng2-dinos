@@ -1,16 +1,16 @@
 <div class="layout-overflow">
-	<div class="layout-canvas" layout-resize [ngClass]="{'nav-open': navOpen, 'nav-closed': !navOpen}">
+  <div class="layout-canvas" appLayoutResize [ngClass]="{'nav-open': navOpen, 'nav-closed': !navOpen}">
 
-		<!-- HEADER -->
-		<app-header (navToggled)="navToggleHandler($event)"></app-header>
+    <!-- HEADER -->
+    <app-header (navToggled)="navToggleHandler($event)"></app-header>
 
-		<!-- CONTENT -->
-		<div id="layout-view" class="layout-view">
-			<router-outlet></router-outlet>
-		</div>
+    <!-- CONTENT -->
+    <div id="layout-view" class="layout-view">
+      <router-outlet></router-outlet>
+    </div>
 
-		<!-- FOOTER -->
-		<app-footer></app-footer>
+    <!-- FOOTER -->
+    <app-footer></app-footer>
 
-	</div> <!-- /.layout-canvas -->
+  </div> <!-- /.layout-canvas -->
 </div> <!-- /.layout-overflow -->

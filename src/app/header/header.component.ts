@@ -6,11 +6,11 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent  {
-	@Output() navToggled = new EventEmitter();
-	navOpen:boolean = false;
+  @Output() navToggled = new EventEmitter();
+  navOpen: boolean = false;
 
-	toggleNav() {
-		this.navOpen = !this.navOpen;
-		this.navToggled.emit(this.navOpen);
-	}
+  toggleNav() {
+    this.navOpen = !this.navOpen;
+    this.navToggled.emit(this.navOpen);
+  }
 }
