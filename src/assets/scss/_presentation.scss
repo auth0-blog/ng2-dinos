@@ -1,27 +1,27 @@
 /*--------------------
-	 PRESENTATION
+    PRESENTATION
 --------------------*/
 
 body {
-	background: #eee;
-	color: #333;
-	font: normal 16px/1.2 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+  background: #eee;
+  color: #333;
+  font: normal 16px/1.2 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
 }
 .layout-canvas {
-	background: #fff;
+  background: #fff;
 }
 
 /*-------------------------------------------------------------------- Content --*/
 
 .content-wrapper {
-	padding: $padding-screen-small;
+  padding: $padding-screen-small;
 
-	@include mq($large) {
-		margin: 0 auto;
-		max-width: 960px;
-		padding: $padding-screen-large;
-	}
+  @include mq($large) {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: $padding-screen-large;
+  }
 }
 .content-heading {
-	text-align: center;
+  text-align: center;
 }
