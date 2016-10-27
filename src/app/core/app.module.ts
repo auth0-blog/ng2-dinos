@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FilterService } from './filter.service';
 import { DinosService } from './dinos.service';
-import { AppComponent } from './ui/app.component';
+import { AppComponent } from './app.component';
 import { LayoutResizeDirective } from './ui/layout-resize.directive';
 import { LoadingComponent } from './ui/loading.component';
 import { HeaderComponent } from '../header/header.component';
