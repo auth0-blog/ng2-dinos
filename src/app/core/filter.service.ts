@@ -14,7 +14,7 @@ export class FilterService {
         for (let key in item) {
           let value = item[key];
 
-          if ((typeof value === 'string' || value instanceof String) && (value.toLowerCase().indexOf(lQuery) !== -1)) {
+          if ((typeof value === 'string') && (value.toLowerCase().indexOf(lQuery) !== -1)) {
             return true;
           }
         }
@@ -22,5 +22,5 @@ export class FilterService {
       return filteredArray;
     }
   }
-  
+
 }

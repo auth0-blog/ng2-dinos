@@ -13,5 +13,5 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle(this.pageName);
   }
-  
+
 }

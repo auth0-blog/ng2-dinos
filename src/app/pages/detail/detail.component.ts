@@ -48,5 +48,5 @@ export class DetailComponent implements OnInit {
   get isLoaded() {
     return this.loading === false;
   }
-  
+
 }

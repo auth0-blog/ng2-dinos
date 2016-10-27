@@ -13,5 +13,5 @@ export class Error404Component implements OnInit {
   ngOnInit() {
     this.titleService.setTitle(this.pageName);
   }
-  
+
 }
