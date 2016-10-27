@@ -11,6 +11,7 @@ import { LayoutResizeDirective } from './ui/layout-resize.directive';
 import { LoadingComponent } from './ui/loading.component';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
+
 import { AboutComponent } from '../pages/about/about.component';
 import { HomeComponent } from '../pages/home/home.component';
 import { Error404Component } from '../pages/error404/error404.component';
