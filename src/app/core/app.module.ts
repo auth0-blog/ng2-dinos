@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
-import { FilterPipe } from './filter.pipe';
+import { FilterService } from './filter.service';
 import { DinosService } from './dinos.service';
 import { AppComponent } from './ui/app.component';
 import { LayoutResizeDirective } from './ui/layout-resize.directive';
@@ -28,8 +28,7 @@ import { DinoCardComponent } from '../pages/home/dino-card/dino-card.component';
     HomeComponent,
     DetailComponent,
     Error404Component,
-    DinoCardComponent,
-    FilterPipe
+    DinoCardComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +38,8 @@ import { DinoCardComponent } from '../pages/home/dino-card/dino-card.component';
   ],
   providers: [
     Title,
-    DinosService
+    DinosService,
+    FilterService
   ],
   bootstrap: [AppComponent]
 })

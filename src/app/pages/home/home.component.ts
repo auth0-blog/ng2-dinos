@@ -3,6 +3,7 @@ import { Title } from '@angular/platform-browser';
 
 import { DinosService } from '../../core/dinos.service';
 import { Dino } from '../../core/models/dino.model';
+import { FilterService } from '../../core/filter.service';
 
 @Component({
   selector: 'app-home',
@@ -11,12 +12,16 @@ import { Dino } from '../../core/models/dino.model';
 })
 export class HomeComponent implements OnInit {
   dinos: Dino[];
+  filteredDinos: Dino[];
   pageName: string = 'All Dinosaurs';
   error: boolean;
   query: string = '';
   loading: boolean;
 
-  constructor(private titleService: Title, private dinosService: DinosService) { }
+  constructor(
+    private titleService: Title,
+    private dinosService: DinosService,
+    private filterService: FilterService) { }
 
   getAllDinos() {
     this.dinosService
@@ -24,6 +29,7 @@ export class HomeComponent implements OnInit {
       .subscribe(
         res => {
           this.dinos = res;
+          this.filteredDinos = res;
           this.loading = false;
         },
         err => {
@@ -41,6 +47,10 @@ export class HomeComponent implements OnInit {
 
   resetQuery() {
     this.query = '';
+  }
+
+  filterDinos(query: string) {
+    this.filteredDinos = this.filterService.search(this.dinos, this.query);
   }
 
   get isLoaded() {

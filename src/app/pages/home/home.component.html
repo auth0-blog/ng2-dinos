@@ -4,10 +4,18 @@
   <app-loading *ngIf="loading"></app-loading>
 
   <div *ngIf="isLoaded">
+    
     <!-- Search dinosaurs -->
     <section *ngIf="dinos" class="home-search input-group">
       <label class="input-group-addon" for="search">Search</label>
-      <input id="search" type="text" [(ngModel)]="query" class="form-control" />
+
+      <input
+        id="search" 
+        type="text"
+        class="form-control"
+        [(ngModel)]="query"
+        (keyup)="filterDinos(query)" />
+
       <span class="input-group-btn">
         <button class="btn btn-danger" (click)="resetQuery()" [disabled]="!query">&times;</button>
       </span>
@@ -15,13 +23,13 @@
     
     <!-- Dinosaurs -->
     <section *ngIf="dinos" class="row">
-      <div class="col-sm-12 col-md-4" *ngFor="let dino of dinos | filter:query">
+      <div class="col-sm-12 col-md-4" *ngFor="let dino of filteredDinos">
         <app-dino-card [dino]="dino"></app-dino-card>
       </div>
     </section>
 
     <!-- No search results -->
-    <p *ngIf="dinos && !(dinos | filter:query).length && query && !error" class="alert alert-warning">
+    <p *ngIf="dinos && !filteredDinos.length && query && !error" class="alert alert-warning">
       No information available on a dinosaur called <em class="text-danger">{{query}}</em>, sorry!
     </p>
 
