@@ -58,7 +58,7 @@
   box-shadow: inset -8px 0 8px -6px rgba(0,0,0,0.2);
   padding: $padding-screen-small;
 
-  .active .nav-list-item-text {
+  .active {
     font-weight: bold;
   }
   &-list {

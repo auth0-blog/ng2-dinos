@@ -13,7 +13,7 @@ import { FilterService } from '../../core/filter.service';
 export class HomeComponent implements OnInit {
   dinos: Dino[];
   filteredDinos: Dino[];
-  pageName: string = 'All Dinosaurs';
+  pageName: string = 'Dinosaurs';
   error: boolean;
   query: string = '';
   loading: boolean;
