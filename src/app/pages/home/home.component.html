@@ -17,7 +17,10 @@
         (keyup)="filterDinos(query)" />
 
       <span class="input-group-btn">
-        <button class="btn btn-danger" (click)="resetQuery()" [disabled]="!query">&times;</button>
+        <button
+          class="btn btn-danger"
+          (click)="resetQuery()"
+          [disabled]="!query">&times;</button>
       </span>
     </section>
     
@@ -29,7 +32,7 @@
     </section>
 
     <!-- No search results -->
-    <p *ngIf="dinos && !filteredDinos.length && query && !error" class="alert alert-warning">
+    <p *ngIf="noSearchResults" class="alert alert-warning">
       No information available on a dinosaur called <em class="text-danger">{{query}}</em>, sorry!
     </p>
 

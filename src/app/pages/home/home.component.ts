@@ -45,16 +45,21 @@ export class HomeComponent implements OnInit {
     this.getAllDinos();
   }
 
-  resetQuery() {
-    this.query = '';
-  }
-
   filterDinos(query: string) {
     this.filteredDinos = this.filterService.search(this.dinos, this.query);
   }
 
+  resetQuery() {
+    this.query = '';
+    this.filterDinos(this.query);
+  }
+
   get isLoaded() {
     return this.loading === false;
+  }
+
+  get noSearchResults() {
+    return this.dinos && !this.filteredDinos.length && this.query && !this.error;
   }
 
 }
