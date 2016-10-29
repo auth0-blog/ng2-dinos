@@ -23,7 +23,7 @@
     
     <!-- Dinosaurs -->
     <section *ngIf="dinos" class="row">
-      <div class="col-sm-12 col-md-4" *ngFor="let dino of filteredDinos">
+      <div class="col-xs-12 col-sm-4" *ngFor="let dino of filteredDinos">
         <app-dino-card [dino]="dino"></app-dino-card>
       </div>
     </section>
