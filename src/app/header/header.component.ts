@@ -6,7 +6,7 @@ import { Component, ViewEncapsulation, Output, EventEmitter } from '@angular/cor
   styleUrls: ['./header.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class HeaderComponent  {
+export class HeaderComponent {
   @Output() navToggled = new EventEmitter();
   navOpen: boolean = false;
 
