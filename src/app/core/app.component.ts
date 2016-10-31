@@ -6,7 +6,7 @@ import { Router, NavigationStart } from '@angular/router';
   templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
-  navOpen: boolean = false;
+  navOpen: boolean;
 
   constructor(private router: Router) { }
 
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
     });
   }
 
-  navToggleHandler() {
-    this.navOpen = !this.navOpen;
+  navToggleHandler($event: boolean) {
+    this.navOpen = $event;
   }
 }
