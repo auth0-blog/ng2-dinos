@@ -26,7 +26,7 @@ export class DetailComponent implements OnInit {
       let id = +params['id'];	// convert string to number
 
       this.dinosService
-        .getDino(id)
+        .getDino$(id)
         .subscribe(
           res => {
             this.dino = res;

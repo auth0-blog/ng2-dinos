@@ -30,8 +30,8 @@ export class AppComponent implements OnInit {
     this.resizeFn(null);
   }
 
-  navToggleHandler($event: boolean) {
-    this.navOpen = $event;
+  navToggleHandler(e: boolean) {
+    this.navOpen = e;
   }
 
   private resizeFn(e) {

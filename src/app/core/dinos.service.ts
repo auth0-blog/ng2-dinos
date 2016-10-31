@@ -13,14 +13,14 @@ export class DinosService {
 
   constructor(private http: Http) { }
 
-  getAllDinos(): Observable<Dino[]> {
+  getAllDinos$(): Observable<Dino[]> {
     return this.http
       .get(`${this.baseUrl}dinosaurs`)
       .map(this.handleSuccess)
       .catch(this.handleError);
   }
 
-  getDino(id: number): Observable<DinoDetail> {
+  getDino$(id: number): Observable<DinoDetail> {
     return this.http.get(`${this.baseUrl}dinosaur/${id}`)
       .map(this.handleSuccess)
       .catch(this.handleError);

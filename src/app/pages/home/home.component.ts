@@ -23,9 +23,9 @@ export class HomeComponent implements OnInit {
     private dinosService: DinosService,
     private filterService: FilterService) { }
 
-  getAllDinos() {
+  getDinos() {
     this.dinosService
-      .getAllDinos()
+      .getAllDinos$()
       .subscribe(
         res => {
           this.dinos = res;
@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle(this.pageName);
     this.loading = true;
-    this.getAllDinos();
+    this.getDinos();
   }
 
   filterDinos(query: string) {
