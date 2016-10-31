@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationStart } from '@angular/router';
+import { Observable } from 'rxjs/Rx';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,8 @@ import { Router, NavigationStart } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   navOpen: boolean;
+  minHeight: string;
+  private initWinHeight: number = 0;
 
   constructor(private router: Router) { }
 
@@ -16,9 +19,23 @@ export class AppComponent implements OnInit {
         this.navOpen = false;
       }
     });
+
+    Observable.fromEvent(window, 'resize')
+      .debounceTime(200)
+      .subscribe((event) => {
+        this.resizeFn(event);
+      });
+
+    this.initWinHeight = window.innerHeight;
+    this.resizeFn(null);
   }
 
   navToggleHandler($event: boolean) {
     this.navOpen = $event;
+  }
+
+  private resizeFn(e) {
+    let winHeight = e ? e.target.innerHeight : this.initWinHeight;
+    this.minHeight = winHeight + 'px';
   }
 }

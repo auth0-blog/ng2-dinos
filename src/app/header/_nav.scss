@@ -34,7 +34,7 @@
       bottom: -9px;
     }
   }
-  .nav-open & {
+  :host-context(.nav-open) & {
     span {
       background: transparent;
 
