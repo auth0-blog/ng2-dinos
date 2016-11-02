@@ -4,8 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
-import { FilterService } from './filter.service';
-import { DinosService } from './dinos.service';
 import { AppComponent } from './app.component';
 import { LoadingComponent } from './ui/loading.component';
 import { HeaderComponent } from '../header/header.component';
@@ -36,9 +34,7 @@ import { DinoCardComponent } from '../pages/home/dino-card/dino-card.component';
     AppRoutingModule
   ],
   providers: [
-    Title,
-    DinosService,
-    FilterService
+    Title
   ],
   bootstrap: [AppComponent]
 })

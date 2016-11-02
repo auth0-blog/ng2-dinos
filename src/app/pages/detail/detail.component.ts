@@ -8,7 +8,8 @@ import { DinoDetail } from '../../core/models/dino-detail.model';
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
-  styleUrls: ['./detail.component.scss']
+  styleUrls: ['./detail.component.scss'],
+  providers: [DinosService]
 })
 export class DetailComponent implements OnInit {
   dino: DinoDetail;

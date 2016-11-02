@@ -8,7 +8,8 @@ import { FilterService } from '../../core/filter.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  providers: [DinosService, FilterService]
 })
 export class HomeComponent implements OnInit {
   dinos: Dino[];
