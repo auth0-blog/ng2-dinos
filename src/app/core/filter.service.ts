@@ -2,8 +2,6 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class FilterService {
-  constructor() { }
-
   search(array: any[], query: string) {
     let lQuery = query.toLowerCase();
 
