@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { Dino } from '../../../core/models/dino.model';
 
@@ -6,8 +6,6 @@ import { Dino } from '../../../core/models/dino.model';
   selector: 'app-dino-card',
   templateUrl: './dino-card.component.html'
 })
-export class DinoCardComponent implements OnInit {
+export class DinoCardComponent {
   @Input() dino: Dino;
-
-  ngOnInit() { }
 }
