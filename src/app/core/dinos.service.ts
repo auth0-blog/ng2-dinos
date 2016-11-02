@@ -27,11 +27,7 @@ export class DinosService {
   }
 
   private handleSuccess(res: Response) {
-    if (typeof res === 'object') {
-      return res.json();
-    } else {
-      this.handleError({message: 'Retrieved data is not typeof object'});
-    }
+    return res.json();
   }
 
   private handleError(err: Response | any) {
