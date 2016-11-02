@@ -5,7 +5,7 @@
 @import '../../assets/scss/partials/layout.vars';
 @import '../../assets/scss/partials/responsive.partial';
 
-.footer {
+:host {
   padding: $padding-screen-small;
   text-align: center;
 
