@@ -51,7 +51,7 @@ export class HomeComponent implements OnInit {
 
   resetQuery() {
     this.query = '';
-    this.filterDinos(this.query);
+    this.filteredDinos = this.dinos;
   }
 
   get isLoaded() {
