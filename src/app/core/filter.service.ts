@@ -10,9 +10,7 @@ export class FilterService {
     } else if (array) {
       let filteredArray = array.filter(item => {
         for (let key in item) {
-          let value = item[key];
-
-          if ((typeof value === 'string') && (value.toLowerCase().indexOf(lQuery) !== -1)) {
+          if ((typeof item[key] === 'string') && (item[key].toLowerCase().indexOf(lQuery) !== -1)) {
             return true;
           }
         }
