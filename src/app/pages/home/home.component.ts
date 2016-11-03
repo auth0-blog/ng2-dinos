@@ -14,10 +14,10 @@ import { FilterService } from '../../core/filter.service';
 export class HomeComponent implements OnInit {
   dinos: Dino[];
   filteredDinos: Dino[];
-  pageName: string = 'Dinosaurs';
   error: boolean;
-  query: string = '';
   loading: boolean;
+  pageName: string = 'Dinosaurs';
+  query: string = '';
 
   constructor(
     private titleService: Title,
@@ -25,8 +25,7 @@ export class HomeComponent implements OnInit {
     private filterService: FilterService) { }
 
   getDinos() {
-    this.dinosService
-      .getAllDinos$()
+    this.dinosService.getAllDinos$()
       .subscribe(
         res => {
           this.dinos = res;
