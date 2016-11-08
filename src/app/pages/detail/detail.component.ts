@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { Router, ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 
 import { DinosService } from '../../core/dinos.service';
 import { DinoDetail } from '../../core/models/dino-detail.model';
@@ -19,7 +19,6 @@ export class DetailComponent implements OnInit {
   constructor(
     private titleService: Title,
     private dinosService: DinosService,
-    private router: Router,
     private route: ActivatedRoute) { }
 
   getDino() {
