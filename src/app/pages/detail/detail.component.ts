@@ -29,7 +29,7 @@ export class DetailComponent implements OnInit {
         .subscribe(
           res => {
             this.dino = res;
-            this.titleService.setTitle(res.name);
+            this.titleService.setTitle(this.dino.name);
             this.loading = false;
           },
           err => {
