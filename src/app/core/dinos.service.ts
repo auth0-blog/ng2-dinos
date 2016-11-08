@@ -21,7 +21,8 @@ export class DinosService {
   }
 
   getDino$(id: number): Observable<DinoDetail> {
-    return this.http.get(`${this.baseUrl}dinosaur/${id}`)
+    return this.http
+      .get(`${this.baseUrl}dinosaur/${id}`)
       .map(this.handleSuccess)
       .catch(this.handleError);
   }
