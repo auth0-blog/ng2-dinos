@@ -30,10 +30,11 @@ export class DetailComponent implements OnInit {
           res => {
             this.dino = res;
             this.titleService.setTitle(this.dino.name);
-            this.loading = false;
           },
           err => {
             this.error = true;
+          },
+          () => {
             this.loading = false;
           }
         );

@@ -30,10 +30,11 @@ export class HomeComponent implements OnInit {
         res => {
           this.dinos = res;
           this.filteredDinos = res;
-          this.loading = false;
         },
         err => {
           this.error = true;
+        },
+        () => {
           this.loading = false;
         }
       );
