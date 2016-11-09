@@ -3,6 +3,8 @@
   <app-loading *ngIf="loading"></app-loading>
 
   <div *ngIf="isLoaded">
+
+    <!-- Dinosaur details -->
     <section *ngIf="dino" id="detail-content-dinosaur" class="panel panel-default">
       <div class="panel-heading">
         <h2 class="text-center">{{dino.name}}</h2>
@@ -44,11 +46,11 @@
         <a routerLink="/">&larr; All Dinosaurs</a>
       </div>
     </section>
-  </div>
 
-  <!-- Error -->
-  <p *ngIf="error" class="alert alert-danger">
-    <strong>Rawr!</strong> There was an error retrieving data for the dinosaur you requested.
-  </p>
+    <!-- Error -->
+    <p *ngIf="error" class="alert alert-danger">
+      <strong>Rawr!</strong> There was an error retrieving data for the dinosaur you requested.
+    </p>
+  </div>
 
 </article>
