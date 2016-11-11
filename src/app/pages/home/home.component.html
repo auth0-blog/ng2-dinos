@@ -4,13 +4,13 @@
   <app-loading *ngIf="loading"></app-loading>
 
   <div *ngIf="isLoaded">
-    
+
     <!-- Search dinosaurs -->
     <section *ngIf="dinos" class="home-search input-group">
       <label class="input-group-addon" for="search">Search</label>
 
       <input
-        id="search" 
+        id="search"
         type="text"
         class="form-control"
         [(ngModel)]="query"
@@ -23,7 +23,7 @@
           [disabled]="!query">&times;</button>
       </span>
     </section>
-    
+
     <!-- Dinosaurs -->
     <section *ngIf="dinos" class="row">
       <div class="col-xs-12 col-sm-4" *ngFor="let dino of filteredDinos">
