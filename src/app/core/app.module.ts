@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DinosService } from './dinos.service';
 import { LoadingComponent } from './ui/loading.component';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
@@ -34,7 +35,8 @@ import { DinoCardComponent } from '../pages/home/dino-card/dino-card.component';
     AppRoutingModule
   ],
   providers: [
-    Title
+    Title,
+    DinosService
   ],
   bootstrap: [AppComponent]
 })

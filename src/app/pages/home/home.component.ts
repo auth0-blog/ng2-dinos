@@ -9,7 +9,7 @@ import { FilterService } from '../../core/filter.service';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  providers: [DinosService, FilterService]
+  providers: [FilterService]
 })
 export class HomeComponent implements OnInit {
   dinos: Dino[];
