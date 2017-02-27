@@ -16,8 +16,8 @@ export class HomeComponent implements OnInit {
   filteredDinos: Dino[];
   error: boolean;
   loading: boolean;
-  pageName: string = 'Dinosaurs';
-  query: string = '';
+  pageName = 'Dinosaurs';
+  query = '';
 
   constructor(
     private titleService: Title,

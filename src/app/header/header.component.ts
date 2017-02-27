@@ -8,7 +8,7 @@ import { Router, NavigationStart } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   @Output() navToggled = new EventEmitter();
-  navOpen: boolean = false;
+  navOpen = false;
 
   constructor(private router: Router) { }
 

@@ -32,7 +32,7 @@ export class DinosService {
   }
 
   private handleError(err: Response | any) {
-    let errorMsg = err.message || 'Unable to retrieve data';
+    const errorMsg = err.message || 'Unable to retrieve data';
     return Observable.throw(errorMsg);
   }
 

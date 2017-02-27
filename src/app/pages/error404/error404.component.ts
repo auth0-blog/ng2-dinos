@@ -6,7 +6,7 @@ import { Title } from '@angular/platform-browser';
   templateUrl: './error404.component.html'
 })
 export class Error404Component implements OnInit {
-  pageName: string = '404 Page Not Found';
+  pageName = '404 Page Not Found';
 
   constructor(private titleService: Title) { }
 

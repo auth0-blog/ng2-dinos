@@ -8,7 +8,7 @@ import { Observable } from 'rxjs/Rx';
 export class AppComponent implements OnInit {
   navOpen: boolean;
   minHeight: string;
-  private initWinHeight: number = 0;
+  private initWinHeight = 0;
 
   ngOnInit() {
     Observable.fromEvent(window, 'resize')
@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
   }
 
   private resizeFn(e) {
-    let winHeight: number = e ? e.target.innerHeight : this.initWinHeight;
+    const winHeight: number = e ? e.target.innerHeight : this.initWinHeight;
     this.minHeight = `${winHeight}px`;
   }
 }

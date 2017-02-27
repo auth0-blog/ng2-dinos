@@ -22,7 +22,7 @@ export class DetailComponent implements OnInit {
 
   getDino() {
     this.route.params.forEach((params: Params) => {
-      let id = +params['id'];	// convert string to number
+      const id = +params['id'];	// convert string to number
 
       this.dinosService.getDino$(id)
         .subscribe(
