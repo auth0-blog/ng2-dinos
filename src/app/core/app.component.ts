@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 
+declare var window: any;
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html'
