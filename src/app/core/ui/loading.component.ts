@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styles: [`
     .loading { 
       display: block; 
-      margin: 30px auto; }
+      margin: 30px auto;
+    }
   `]
 })
 export class LoadingComponent { }
