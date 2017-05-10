@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router, NavigationStart } from '@angular/router';
+import 'rxjs/add/operator/filter';
 
 @Component({
   selector: 'app-header',
